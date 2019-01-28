@@ -48,7 +48,19 @@ let anchorsArray = Array.from(anchors);
 //adds text content from site content object to each anchor element
 anchorsArray.forEach((anchor, index) => {
   anchor.textContent = siteContent["nav"][`nav-item-${index+1}`];
+  anchor.style.color = "green";
 });
+
+let navbar = document.querySelector("nav");
+let anchorItemOne = document.createElement("a");
+anchorItemOne.textContent = "Hello";
+anchorItemOne.style.color = "green";
+let anchorItemTwo = document.createElement("a");
+anchorItemTwo.textContent = "Goodbye";
+anchorItemTwo.style.color = "green";
+navbar.prepend(anchorItemOne);
+navbar.appendChild(anchorItemTwo);
+
 
 //HEADER IMG
 let codeCircle = document.getElementById("cta-img");
